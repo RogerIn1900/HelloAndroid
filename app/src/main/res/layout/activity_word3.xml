@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:paddingTop="?attr/actionBarSize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Word3"
+    android:background="#56FDD835">
+
+    <TextView
+        android:id="@+id/w1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/A5"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/a1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="300dp"
+        android:clickable="true"
+
+        android:onClick="myclick1"
+        android:text="@string/tran11"
+
+        />
+
+    <Button
+        android:id="@+id/a2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/a1"
+        android:text="@string/tran6"
+
+        android:clickable="true"
+        android:onClick="myclick2"
+        />
+    <Button
+        android:id="@+id/a3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:layout_below="@+id/a2"
+        android:text="@string/tran5"
+
+        android:clickable="true"
+        android:onClick="myclick3"
+        />
+    <Button
+        android:id="@+id/a4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/a3"
+        android:text="@string/tran13"
+
+        android:clickable="true"
+        android:onClick="myclick4"
+        />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="next"
+        android:textSize="20dp"
+        android:layout_below="@+id/a4"
+        android:layout_centerHorizontal="true"></Button>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="69dp"
+        android:text="exit"
+        android:textSize="20dp"></Button>
+</RelativeLayout>

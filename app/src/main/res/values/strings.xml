@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">TestingGround2</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="goods1">又是积累知识的一天！^ o ^</string>
+    <string name="goods2">知识是人类进步的阶梯！^ o ^</string>
+
+    <string name="test1">revive:vt.vi.\n(使)苏醒，(使)复活</string>
+    <string name="test2">vary:vi.\n不同，有差异；(根据情况)变化</string>
+    <string name="test3">lake:n.\n湖，湖泊</string>
+    <string name="test4">dare:modal.\n敢，敢于</string>
+    <string name="test5">date:n.\n日期；时候；约会（对象）；海枣</string>
+    <string name="test6">hunting:n.\n打猎，狩猎；搜寻，寻找</string>
+    <string name="test7">accounting:n.\n会计行业，会计学</string>
+    <string name="test8">outing:n.\n(通常指集体)短途旅游</string>
+    <string name="test9">accompanying:adj.\n陪伴的，附随的</string>
+    <string name="test10">savage:adj.\n凶恶的；猛烈抨击的；野蛮的</string>
+    <string name="test11">amaze:vt.\n使惊奇，使大吃一惊</string>
+    <string name="test12">damage:n.\n损坏，损害，伤害；损害赔偿金</string>
+    <string name="test13">demand:n.\n要求；需求 </string>
+
+
+    <string name="A1">revive </string>
+    <string name="A2">vary </string>
+    <string name="A3">lake </string>
+    <string name="A4">dare </string>
+    <string name="A5">date </string>
+    <string name="A6">hunting </string>
+    <string name="A7">accounting </string>
+    <string name="A8">outing </string>
+    <string name="A9">accompanying </string>
+
+    <string name="A10">savage </string>
+    <string name="A11">amaze </string>
+    <string name="A12">damage </string>
+    <string name="A13">demand </string>
+
+
+    <string name="tran1"> vt.vi.\n(使)苏醒，(使)复活</string>
+    <string name="tran2"> vi.\n不同，有差异；(根据情况)变化</string>
+    <string name="tran3"> n.\n湖，湖泊</string>
+    <string name="tran4"> modal.\n敢，敢于</string>
+    <string name="tran5"> n.\n日期；时候；约会（对象）；海枣</string>
+    <string name="tran6"> n.\n打猎，狩猎；搜寻，寻找</string>
+    <string name="tran7"> n.\n会计行业，会计学</string>
+    <string name="tran8"> n.\n(通常指集体)短途旅游</string>
+    <string name="tran9"> adj.\n陪伴的，附随的</string>
+
+    <string name="tran10">adj.\n凶恶的；猛烈抨击的；野蛮的 </string>
+    <string name="tran11">vt.\n使惊奇，使大吃一惊 </string>
+    <string name="tran12">n.\n损坏，损害，伤害；损害赔偿金 </string>
+    <string name="tran13">n.\n要求；需求 </string>
+
+
+</resources>

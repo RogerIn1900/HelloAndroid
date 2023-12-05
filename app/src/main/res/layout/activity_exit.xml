@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exit"
+    android:background="@drawable/ic_greeny">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="每天都要背单词哦`"
+        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        ></TextView>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:text="好的"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_marginTop="400dp"
+        ></Button>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:text="返回"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_marginTop="480dp"
+        ></Button>
+</RelativeLayout>
