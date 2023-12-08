@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    public Button start,add,review,putbox,b1,b2;
+    public Button start,add,review,putbox,look_up,exit;
     public ImageButton login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         login.setOnClickListener(this);
         start.setOnClickListener(this);
         putbox.setOnClickListener(this);
-        b1.setOnClickListener(this);
-        b2.setOnClickListener(this);
+        look_up.setOnClickListener(this);
+        exit.setOnClickListener(this);
         add.setOnClickListener(this);
 
 //        review.setOnClickListener(this);
@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         start=findViewById(R.id.start);
         add=findViewById(R.id.add);
         putbox=findViewById(R.id.putbox);
-        b1=findViewById(R.id.b1);
-        b2=findViewById(R.id.b2);
+        exit=findViewById(R.id.exit);
+        look_up=findViewById(R.id.look_up);
         review=findViewById(R.id.review);
 
 
@@ -65,14 +65,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent=new Intent(this,Putbox.class);
             Toast.makeText(this, "跳转到收藏夹界面", Toast.LENGTH_SHORT).show();
             startActivity(intent);
-        }else if(id==R.id.b1){
-            Intent intent=new Intent(this,B1.class);
-            Toast.makeText(this, "跳转到B1界面", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
-        }else if(id==R.id.b2){
-            Intent intent=new Intent(this,B2.class);
-            Toast.makeText(this, "跳转到B2界面", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
+        }else if(id==R.id.exit){
+            finish();
+        }else if(id==R.id.look_up){
+            ;
         }else if(id==R.id.review){
             Intent intent=new Intent(this,Review.class);
             Toast.makeText(this, "跳转到复习界面", Toast.LENGTH_SHORT).show();

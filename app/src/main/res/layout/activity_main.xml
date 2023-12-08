@@ -103,12 +103,14 @@
     </ImageButton>
 
     <Button
-        android:id="@+id/b1"
-        android:layout_width="50dp"
+        android:id="@+id/exit"
+        android:layout_width="80dp"
         android:layout_height="50dp"
+        android:text="退出"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintHorizontal_bias="0.839"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -117,9 +119,11 @@
 
     <Button
         android:id="@+id/putbox"
-        android:layout_width="50dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="68dp"
+
+        android:text="收藏夹"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -130,13 +134,14 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/b2"
-        android:layout_width="50dp"
+        android:id="@+id/look_up"
+        android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_marginStart="60dp"
+        android:text="查词"
+
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/pushBtn"
-        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
