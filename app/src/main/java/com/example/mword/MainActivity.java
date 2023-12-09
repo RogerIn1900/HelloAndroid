@@ -68,7 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if(id==R.id.exit){
             finish();
         }else if(id==R.id.look_up){
-            ;
+            Intent intent=new Intent(this,Look_up.class);
+            Toast.makeText(this, "跳转到查找界面", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
         }else if(id==R.id.review){
             Intent intent=new Intent(this,Review.class);
             Toast.makeText(this, "跳转到复习界面", Toast.LENGTH_SHORT).show();
