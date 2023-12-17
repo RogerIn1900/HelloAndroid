@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Word1"
-    android:background="#56FDD835">
+    android:background="@drawable/b8">
 
     <TextView
         android:id="@+id/w1"
@@ -82,15 +82,15 @@
         android:backgroundTint="#FB8C00"
         android:textSize="20dp"></Button>
 
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@android:drawable/btn_star_big_on"
-        android:text="收藏夹"
-        android:backgroundTint="#FB8C00"
-        android:id="@+id/collec"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
+<!--    <Button-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:background="@android:drawable/btn_star_big_on"-->
+<!--        android:text="收藏夹"-->
+<!--        android:backgroundTint="#FB8C00"-->
+<!--        android:id="@+id/collec"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentTop="true"-->
 
-        ></Button>
+<!--        ></Button>-->
 </RelativeLayout>

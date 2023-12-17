@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Add"
-    android:background="#99FFB300">
+    android:background="@drawable/b7">
 
     <TextView
         android:id="@+id/show"
-        android:layout_width="317dp"
-        android:layout_height="65dp"
+        android:layout_width="325dp"
+        android:layout_height="129dp"
         android:background="#61FFB300"
         android:gravity="center_horizontal"
         android:text="来添加一些你想要记忆的单词吧！"
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintVertical_bias="0.83" />
 
     <EditText
         android:id="@+id/word"
@@ -32,10 +32,10 @@
         android:hint="在这里输入你想要记忆的单词"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31" />
+        app:layout_constraintVertical_bias="0.431" />
 
     <Button
         android:id="@+id/add"
@@ -47,9 +47,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64" />
+        app:layout_constraintVertical_bias="0.957" />
 
     <EditText
         android:id="@+id/translation"
@@ -64,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.586" />
 
     <Button
 
@@ -72,17 +73,16 @@
         android:layout_width="100dp"
         android:layout_height="46dp"
         android:backgroundTint="#FB8C00"
-        android:backgroundTintMode="screen"
         android:text="收藏"
         android:textColor="@color/black"
         android:textSize="20dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737" />
+        app:layout_constraintVertical_bias="0.992" />
 
     <Button
         android:id="@+id/putbox"

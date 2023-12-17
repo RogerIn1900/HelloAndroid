@@ -27,6 +27,7 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+
         init1();
         init2();
         myDbHelper=new MyDbHelper(this,"words",null,666);
@@ -42,6 +43,15 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
         back=findViewById(R.id.back);
         putbox=findViewById(R.id.putbox);
         show=findViewById(R.id.show);
+
+        add.getBackground().setAlpha(128);
+        put.getBackground().setAlpha(1);
+        word.getBackground().setAlpha(255);
+        translation.getBackground().setAlpha(255);
+        back.getBackground().setAlpha(128);
+        putbox.getBackground().setAlpha(128);
+        show.getBackground().setAlpha(228);
+
 
     }
     public void init2(){
@@ -76,10 +86,10 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
 
                 int a=db.update("words", values, "translation=?", new String[]{translation1});
                 if(a>0){
-                    Toast.makeText(this, "修改成功！", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this, "修改成功！", Toast.LENGTH_SHORT).show();
 
                 }else{
-                    Toast.makeText(this, "修改失败！", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this, "修改失败！", Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -88,10 +98,11 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
                 values.put("word", word1);
                 values.put("translation", translation1);
                 db.insert("words", null, values);
-                Toast.makeText(this, "添加成功！", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "添加成功！", Toast.LENGTH_SHORT).show();
             }
             cursor.close();
-        }else if(id==R.id.put){
+        }
+        else if(id==R.id.put){
             String word1 =word.getText().toString();
             String translation1 =translation.getText().toString();
             ContentValues values = new ContentValues();
@@ -103,9 +114,9 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
                 Toast.makeText(this, a, Toast.LENGTH_SHORT).show();
 
                 if(a>0){
-                    Toast.makeText(this, "修改成功！", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this, "修改成功！", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(this, "修改失败！", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this, "修改失败！", Toast.LENGTH_SHORT).show();
                 }
 
             } else {
@@ -113,7 +124,7 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
                 values.put("word", word1);
                 values.put("translation", translation1);
                 db.insert("words", null, values);
-                Toast.makeText(this, "添加成功！", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "添加成功！", Toast.LENGTH_SHORT).show();
             }
             cursor.close();
 
@@ -131,12 +142,12 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
                 Toast.makeText(this, "新单词添加成功！", Toast.LENGTH_SHORT).show();
 
             }else if(b>0){
-                Toast.makeText(this, "收藏成功！", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "收藏成功！", Toast.LENGTH_SHORT).show();
 
             }
 
         }else if(id==R.id.back){
-            Toast.makeText(this, "点击了返回", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "点击了返回", Toast.LENGTH_SHORT).show();
             finish();
 
         }else if(id==R.id.putbox){

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Start"
-    android:background="#80FFB300">
+    android:background="@drawable/b8">
 
     <TextView
         android:id="@+id/start_show"

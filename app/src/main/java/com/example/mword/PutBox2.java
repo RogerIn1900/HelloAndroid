@@ -54,6 +54,16 @@ public class PutBox2 extends AppCompatActivity implements View.OnClickListener{
         show = findViewById(R.id.show);
         fresh= findViewById(R.id.fresh);
 
+        exit.getBackground().setAlpha(128);
+        fresh.getBackground().setAlpha(128);
+        a1.getBackground().setAlpha(128);
+        a2.getBackground().setAlpha(128);
+        a3.getBackground().setAlpha(128);
+        a4.getBackground().setAlpha(128);
+        next.getBackground().setAlpha(128);
+
+
+
         aa = 3;
         a1.setOnClickListener(this);
         a2.setOnClickListener(this);
@@ -107,27 +117,27 @@ public class PutBox2 extends AppCompatActivity implements View.OnClickListener{
 //        answer=getString(resID);
         switch(i){
             case 1:{
-                Toast.makeText(this, "是1", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "是1", Toast.LENGTH_SHORT).show();
                 answer=text1;
                 String[] str=answer.split(":");
                 w1.setText(str[0]);
                 break;
             } case 2:{
-                Toast.makeText(this, "是2", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "是2", Toast.LENGTH_SHORT).show();
                 answer=text2;
                 String[] str=answer.split(":");
                 w1.setText(str[0]);
                 break;
 
             } case 3:{
-                Toast.makeText(this, "是3", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "是3", Toast.LENGTH_SHORT).show();
                 answer=text3;
                 String[] str=answer.split(":");
                 w1.setText(str[0]);
                 break;
 
             } case 4:{
-                Toast.makeText(this, "是4", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "是4", Toast.LENGTH_SHORT).show();
                 answer=text4;
                 String[] str=answer.split(":");
                 w1.setText(str[0]);
@@ -199,7 +209,7 @@ public class PutBox2 extends AppCompatActivity implements View.OnClickListener{
             if(aa!=1){
                 Toast.makeText(this, "请答对之后再记忆下一个单词", Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(this, "开始背诵下一个单词", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "开始背诵下一个单词", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(this,PutBox2.class);
                 startActivity(intent);
             }

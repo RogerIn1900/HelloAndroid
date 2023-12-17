@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#80FFB300"
+    android:background="@drawable/b2"
     android:paddingTop="?attr/actionBarSize">
 
 
@@ -30,7 +30,6 @@
         android:layout_height="113dp"
 
         android:backgroundTint="#FB8C00"
-        android:backgroundTintMode="screen"
         android:onClick="Push"
         android:text="添词"
         android:textColor="#E06A1212"
@@ -52,7 +51,6 @@
         android:layout_marginStart="40dp"
 
         android:backgroundTint="#FB8C00"
-        android:backgroundTintMode="src_over"
         android:onClick="start"
 
         android:text="Start"

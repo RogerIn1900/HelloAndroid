@@ -41,6 +41,7 @@ public class Look_up extends AppCompatActivity implements View.OnClickListener{
         back.setOnClickListener(this);
         find.setOnClickListener(this);
         select.setOnClickListener(this);
+
     }
     @Override
     public void onClick(View view) {
@@ -60,6 +61,8 @@ public class Look_up extends AppCompatActivity implements View.OnClickListener{
                     show.setText("查无此数,\n可以在添词按钮进行添加哟\n(＾Ｕ＾)ノ~ＹＯ");
                 }
             }
+        }else if(id==R.id.back){
+            finish();
         }
     }
 }

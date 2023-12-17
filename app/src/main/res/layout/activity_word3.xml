@@ -7,19 +7,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Word3"
-    android:background="#56FDD835">
+    android:background="@drawable/b8">
 
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@android:drawable/btn_star_big_on"
-        android:text="收藏夹"
+<!--    <Button-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:background="@android:drawable/btn_star_big_on"-->
+<!--        android:text="收藏夹"-->
 
-        android:id="@+id/collec"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
+<!--        android:id="@+id/collec"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentTop="true"-->
 
-        ></Button>
+<!--        ></Button>-->
 
     <TextView
         android:id="@+id/w1"

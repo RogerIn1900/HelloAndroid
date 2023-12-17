@@ -9,8 +9,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="购物商城"
-        android:background="#FF9100"
+        android:text="单词库"
+        android:textColor="#E53935"
+        android:background="#FB8C00"
         android:gravity="center"
         android:textSize="40dp"
         />
@@ -20,5 +21,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="#D3C5C5"
-        android:dividerHeight="2dp"/>
+        android:dividerHeight="2dp"
+        android:background="@drawable/b6"/>
 </LinearLayout>

@@ -2,6 +2,7 @@ package com.example.mword;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +11,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class Review extends AppCompatActivity {
@@ -27,9 +30,13 @@ public class Review extends AppCompatActivity {
         setContentView(R.layout.activity_review);
 
         myList = findViewById(R.id.mylist);
+        myList.getBackground().setAlpha(128);
         foods = inData();
         MyAdapter myAdapter = new MyAdapter();
         myList.setAdapter(myAdapter);
+
+        File dbFile = getDatabasePath("/data/data/com.example.mword/databases/words");
+        db = SQLiteDatabase.openDatabase(dbFile.getAbsolutePath(), null, SQLiteDatabase.OPEN_READONLY);
     }
     public class Food {
 
@@ -69,17 +76,31 @@ public class Review extends AppCompatActivity {
     }
     private ArrayList<Food> inData(){
         ArrayList<Food> foods = new ArrayList<>();
-        foods.add(new Food(R.drawable.ic_launcher_background,"小笼包","10元"));
-        foods.add(new Food(R.drawable.ic_launcher_background,"草莓蛋糕","20元"));
-        foods.add(new Food(R.drawable.ic_launcher_background,"龙虾","200元"));
-        foods.add(new Food(R.drawable.ic_launcher_background,"火锅","150元"));
-        foods.add(new Food(R.drawable.ic_launcher_background,"披萨","60元"));
-        foods.add(new Food(R.drawable.ic_launcher_background,"鳗鱼饭","40元"));
-        foods.add(new Food(R.drawable.ic_launcher_background,"小笼包","10元"));
-        foods.add(new Food(R.drawable.ic_launcher_background,"草莓蛋糕","20元"));
-        foods.add(new Food(R.drawable.ic_launcher_background,"龙虾","200元"));
-        foods.add(new Food(R.drawable.ic_launcher_background,"火锅","150元"));
-        foods.add(new Food(R.drawable.ic_launcher_background,"披萨","60元"));
+        //打开数据库获取信息
+        File dbFile = getDatabasePath("/data/data/com.example.mword/databases/words");
+        db = SQLiteDatabase.openDatabase(dbFile.getAbsolutePath(), null, SQLiteDatabase.OPEN_READONLY);
+        Cursor cursor1 = db.query("words", new String[]{"word", "translation"}, null,null, null, null, null);
+        cursor1.moveToLast();
+        //用循环逐个添加信息
+        int i=cursor1.getPosition();
+        foods.add(new Food(R.drawable.ic_launcher_foreground,cursor1.getString(0),cursor1.getString(1)));
+//        Toast.makeText(this,"pp"+i, Toast.LENGTH_SHORT).show();
+        while(i-->13){
+            foods.add(new Food(R.drawable.bt_shape_press,cursor1.getString(0),cursor1.getString(1)));
+            cursor1.moveToPrevious();
+
+        }
+//        foods.add(new Food(R.drawable.bt_shape_press,"小笼包","10元"));
+//        foods.add(new Food(R.drawable.ic_launcher_background,"草莓蛋糕","20元"));
+//        foods.add(new Food(R.drawable.ic_launcher_background,"龙虾","200元"));
+//        foods.add(new Food(R.drawable.ic_launcher_background,"火锅","150元"));
+//        foods.add(new Food(R.drawable.ic_launcher_background,"披萨","60元"));
+//        foods.add(new Food(R.drawable.ic_launcher_background,"鳗鱼饭","40元"));
+//        foods.add(new Food(R.drawable.ic_launcher_background,"小笼包","10元"));
+//        foods.add(new Food(R.drawable.ic_launcher_background,"草莓蛋糕","20元"));
+//        foods.add(new Food(R.drawable.ic_launcher_background,"龙虾","200元"));
+//        foods.add(new Food(R.drawable.ic_launcher_background,"火锅","150元"));
+//        foods.add(new Food(R.drawable.ic_launcher_background,"披萨","60元"));
         return foods;
     }
     static class ViewHolder{
@@ -116,7 +137,6 @@ public class Review extends AppCompatActivity {
 //             title1.setText(foods.get(i).getTitle());
 //             iv.setBackgroundResource(foods.get(i).getIcon());
 //             price.setText(foods.get(i).getPrice());
-
 
 //             优化写法
             ViewHolder holder = null;

@@ -39,6 +39,12 @@ public class Word3 extends AppCompatActivity implements View.OnClickListener{
         exit=findViewById(R.id.exit);
         a=3;
 
+        a1.getBackground().setAlpha(128);
+        a2.getBackground().setAlpha(128);
+        a3.getBackground().setAlpha(128);
+        a4.getBackground().setAlpha(128);
+        next.getBackground().setAlpha(128);
+        exit.getBackground().setAlpha(128);
     }
 
     @Override
@@ -70,14 +76,14 @@ public class Word3 extends AppCompatActivity implements View.OnClickListener{
         }else if(id==R.id.next){
             if(a!=1){
                 Intent intent=new Intent(Word3.this, Exit.class);
-                Toast.makeText(this,"turn successfully ",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this,"turn successfully ",Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }else{
                 Toast.makeText(this,"请答对后再记忆下一个单词 ",Toast.LENGTH_SHORT).show();
             }
         }else if(id==R.id.exit){
             Intent intent=new Intent(Word3.this, Exit.class);
-            Toast.makeText(this, "跳转到离开页面", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "跳转到离开页面", Toast.LENGTH_SHORT).show();
             startActivity(intent);
 //            finish();
         }
@@ -94,12 +100,12 @@ public class Word3 extends AppCompatActivity implements View.OnClickListener{
         String tran2=msg22[1];
 
         if(a1.getText().equals(tran1) ){
-            Toast.makeText(this,a+a1.getText().toString()+"答对了",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this,a+a1.getText().toString()+"答对了",Toast.LENGTH_SHORT).show();
             a1.setBackgroundColor(getResources().getColor(holo_green_light));
             a1.setText(word2+"\n"+tran2);
             a=1;
         }else{
-            Toast.makeText(this,a+a1.getText().toString()+"答错了",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this,a+a1.getText().toString()+"答错了",Toast.LENGTH_SHORT).show();
             a1.setBackgroundColor(getResources().getColor(holo_red_light));
             a1.setText(word2+"\n"+tran2);
         }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Look_up"
-    android:background="#56FDD835">
+    android:background="@drawable/b7">
 
 
     <Button
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="4dp"
-        android:background="#ADFDD835"
+        android:background="#BCFB8C00"
         android:hint="请输入想要查找的单词"
         android:textSize="20dp"
         android:textColor="#FFB300"
@@ -53,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginStart="4dp"
-        android:background="#B0FDD835"
+        android:background="#B9FB8C00"
         android:gravity="center_horizontal"
         android:padding="10dp"
         android:text="这里将显示查找内容"

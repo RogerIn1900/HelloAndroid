@@ -66,7 +66,7 @@ public class Word2 extends AppCompatActivity {
             public void onClick(View view) {
                 if (a == 1) {
                     Intent intent = new Intent(Word2.this, Word3.class);
-                    Toast.makeText(Word2.this, "turn successfully ", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Word2.this, "turn successfully ", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                 } else {
                     Toast.makeText(Word2.this, "请答对后再记忆下一个单词 ", Toast.LENGTH_SHORT).show();
@@ -77,7 +77,7 @@ public class Word2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Word2.this, Exit.class);
-                Toast.makeText(Word2.this, "exit", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Word2.this, "exit", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });
@@ -91,6 +91,13 @@ public class Word2 extends AppCompatActivity {
         next = findViewById(R.id.next);
         exit=findViewById(R.id.exit);
         a = 3;
+
+        a1.getBackground().setAlpha(128);
+        a2.getBackground().setAlpha(128);
+        a3.getBackground().setAlpha(128);
+        a4.getBackground().setAlpha(128);
+        next.getBackground().setAlpha(128);
+        exit.getBackground().setAlpha(128);
     }
     public void judge(Button aa,int test1,int test2){
         String msg= getString(test1);
@@ -103,12 +110,12 @@ public class Word2 extends AppCompatActivity {
         String word2=msg22[0];
         String tran2=msg22[1];
         if(aa.getText().equals(tran1) ){
-            Toast.makeText(this,a+aa.getText().toString()+"答对了",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this,a+aa.getText().toString()+"答对了",Toast.LENGTH_SHORT).show();
             aa.setBackgroundColor(getResources().getColor(holo_green_light));
             a=1;
             aa.setText(word2+"\n"+tran2);
         }else{
-            Toast.makeText(this,a+aa.getText().toString()+"答错了",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this,a+aa.getText().toString()+"答错了",Toast.LENGTH_SHORT).show();
             aa.setBackgroundColor(getResources().getColor(holo_red_light));
             aa.setText(word2+"\n"+tran2);
         }

@@ -18,6 +18,9 @@ public class Start extends AppCompatActivity {
         back = findViewById(R.id.back);
         word1 = findViewById(R.id.word1);
 
+        back.getBackground().setAlpha(128);
+//        word1.getBackground().setAlpha(128);
+
         //匿名内部类的方式创建点击
         back.setOnClickListener(new View.OnClickListener() {
             @Override
