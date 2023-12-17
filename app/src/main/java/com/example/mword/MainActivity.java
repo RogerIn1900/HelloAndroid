@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         exit.setOnClickListener(this);
         add.setOnClickListener(this);
 
-//        review.setOnClickListener(this);
+        review.setOnClickListener(this);
     }
 
     public void init(){
@@ -72,9 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "跳转到查找界面", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }else if(id==R.id.review){
-//            Intent intent=new Intent(this,Review.class);
-//            Toast.makeText(this, "跳转到复习界面", Toast.LENGTH_SHORT).show();
-//            startActivity(intent);
+            Intent intent=new Intent(this,Review.class);
+            Toast.makeText(this, "跳转到复习界面", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
         }
 
     }
