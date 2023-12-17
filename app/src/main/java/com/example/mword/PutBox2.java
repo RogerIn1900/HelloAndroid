@@ -5,6 +5,7 @@ import static android.R.color.holo_red_light;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -62,6 +63,7 @@ public class PutBox2 extends AppCompatActivity implements View.OnClickListener{
         exit.setOnClickListener(this);
         fresh.setOnClickListener(this);
     }
+    @SuppressLint("ResourceType")
     private void init2(SQLiteDatabase db, File dbFile) {
         db = SQLiteDatabase.openDatabase(dbFile.getAbsolutePath(), null, SQLiteDatabase.OPEN_READONLY);
         cursor = db.query("words", new String[]{"word", "translation"}, null, null, null, null, null);
@@ -76,9 +78,11 @@ public class PutBox2 extends AppCompatActivity implements View.OnClickListener{
         i=num;
 
         cursor1.moveToPosition(cursor.getPosition());
-        show.setText(j+"\n单词:" + cursor.getString(0) + "\n翻译:" + cursor.getString(1));
-        w1.setText(cursor.getString(0));
-        answer=cursor.getString(0)+":"+cursor.getString(1);
+//        show.setText(j+"\n单词:" + cursor.getString(0) + "\n翻译:" + cursor.getString(1));
+//        w1.setText(cursor.getString(0));
+//        answer=cursor.getString(0)+":"+cursor.getString(1);
+
+
 
 
         text1=cursor1.getString(0)+":"+cursor1.getString(1);
@@ -97,8 +101,42 @@ public class PutBox2 extends AppCompatActivity implements View.OnClickListener{
         a4.setText(cursor1.getString(1));
         cursor1.moveToPrevious();
 
+        i= (int) (1+Math.random()*4);
+        String buttonID = "a" + i ;
+//        int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
+//        answer=getString(resID);
+        switch(i){
+            case 1:{
+                Toast.makeText(this, "是1", Toast.LENGTH_SHORT).show();
+                answer=text1;
+                String[] str=answer.split(":");
+                w1.setText(str[0]);
+                break;
+            } case 2:{
+                Toast.makeText(this, "是2", Toast.LENGTH_SHORT).show();
+                answer=text2;
+                String[] str=answer.split(":");
+                w1.setText(str[0]);
+                break;
 
-        show.setText(i+"\n单词:" + cursor.getString(0) + "\n翻译:" + j+cursor.getString(1));
+            } case 3:{
+                Toast.makeText(this, "是3", Toast.LENGTH_SHORT).show();
+                answer=text3;
+                String[] str=answer.split(":");
+                w1.setText(str[0]);
+                break;
+
+            } case 4:{
+                Toast.makeText(this, "是4", Toast.LENGTH_SHORT).show();
+                answer=text4;
+                String[] str=answer.split(":");
+                w1.setText(str[0]);
+                break;
+
+            }
+        }
+
+        show.setText(answer+i+"\n单词:" + cursor.getString(0) + "\n翻译:" + j+cursor.getString(1));
         i++;
 
 //
