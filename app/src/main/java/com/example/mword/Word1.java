@@ -4,10 +4,14 @@ import static android.R.color.holo_green_light;
 import static android.R.color.holo_red_light;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,11 +26,13 @@ public class Word1 extends AppCompatActivity implements View.OnClickListener{
     //    private  int b[]={0};
     private Button a1, a2, a3, a4,next,exit;
     private String data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word1);
         init();
+        init2();
         a1.setOnClickListener(this);
         a2.setOnClickListener(this);
         a3.setOnClickListener(this);
@@ -44,6 +50,15 @@ public class Word1 extends AppCompatActivity implements View.OnClickListener{
         next=findViewById(R.id.next);
         exit=findViewById(R.id.exit);
         a=3;
+        a1.setOnClickListener(this);
+        a2.setOnClickListener(this);
+        a3.setOnClickListener(this);
+        a4.setOnClickListener(this);
+        next.setOnClickListener(this);
+        exit.setOnClickListener(this);
+
+    }
+    public void init2(){
 
     }
 
@@ -110,4 +125,5 @@ public class Word1 extends AppCompatActivity implements View.OnClickListener{
         }
 
     }
+
 }

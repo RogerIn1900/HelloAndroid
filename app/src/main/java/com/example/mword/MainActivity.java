@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         int id=view.getId();
         if(id==R.id.loginButton){
-            Intent intent=new Intent(this,Login.class);
+            Intent intent=new Intent(this,Login1.class);
             Toast.makeText(this, "跳转到登陆页面", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }else if(id==R.id.start){
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "跳转到添加新词界面", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }else if(id==R.id.putbox){
-            Intent intent=new Intent(this,Putbox.class);
+            Intent intent=new Intent(this,PutBox2.class);
             Toast.makeText(this, "跳转到收藏夹界面", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }else if(id==R.id.exit){
@@ -72,9 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "跳转到查找界面", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }else if(id==R.id.review){
-            Intent intent=new Intent(this,Review.class);
-            Toast.makeText(this, "跳转到复习界面", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
+//            Intent intent=new Intent(this,Review.class);
+//            Toast.makeText(this, "跳转到复习界面", Toast.LENGTH_SHORT).show();
+//            startActivity(intent);
         }
 
     }

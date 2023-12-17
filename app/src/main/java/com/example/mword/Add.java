@@ -122,6 +122,8 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
             ContentValues contentValues=new ContentValues();
             contentValues.put("word",word1);
             contentValues.put("translation",translation1);
+            contentValues.put("puts",0);
+
             long a=db.insert("words",null,contentValues);
             long b=db.insert("puts",null,contentValues);
 
@@ -152,7 +154,7 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
 
     }
 
-    class MyDbHelper extends SQLiteOpenHelper {
+    static class MyDbHelper extends SQLiteOpenHelper {
 
         public MyDbHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
             super(context, name, factory, version);

@@ -4,15 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
-    android:background="#80FFB300">
+    android:background="#80FFB300"
+    tools:context=".Enroll">
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="75dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#FB8C00"
+        android:text="登陆"
+        android:textSize="13dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
 
     <Button
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="back"
         android:backgroundTint="#FB8C00"
+        android:text="back"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,12 +55,12 @@
         android:id="@+id/user_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFB300"
         android:ems="10"
         android:gravity="center"
         android:hint="请输入密码"
         android:inputType="textPassword"
         android:password="true"
-        android:backgroundTint="#FFB300"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,13 +110,12 @@
         app:layout_constraintVertical_bias="0.216" />
 
 
-
     <Button
         android:id="@+id/button5"
         android:layout_width="72dp"
         android:layout_height="19dp"
-        android:text="忘记密码"
         android:backgroundTint="#FFB300"
+        android:text="忘记密码"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,11 +142,11 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/enroll"
         android:layout_width="89dp"
         android:layout_height="48dp"
         android:backgroundTint="#FB8C00"
-        android:text="登陆"
+        android:text="注册"
         android:textSize="20dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -140,21 +154,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.313" />
-
-    <Button
-        android:id="@+id/enroll"
-        android:layout_width="75dp"
-        android:layout_height="41dp"
-        android:backgroundTint="#FB8C00"
-        android:text="注册"
-        android:textSize="13dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.004" />
 
     <TextView
         android:id="@+id/textView"
@@ -167,10 +166,9 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423"
-        tools:layout_editor_absoluteX="30dp">
+        app:layout_constraintVertical_bias="0.451"
+        tools:layout_editor_absoluteX="16dp">
 
     </TextView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

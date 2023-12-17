@@ -3,7 +3,6 @@ package com.example.mword;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,15 +14,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-
-public class Login extends AppCompatActivity implements View.OnClickListener{
+public class Enroll extends AppCompatActivity implements View.OnClickListener{
     private Button addBtn, deleteBtn, updateBtn, selectBtn, PasswordViewBtn, enroll,back,login;
     private EditText user_name, user_password,getBtn;
     private TextView showInfo;
-//    private MyDbHelper myDbHelper;
+//    private Login.MyDbHelper myDbHelper;
     private SQLiteDatabase db;
     private void init() {
+        addBtn = findViewById(R.id.add);
         login = findViewById(R.id.login);
         enroll = findViewById(R.id.enroll);
         back=findViewById(R.id.back);
@@ -32,6 +30,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         PasswordViewBtn = findViewById(R.id.PasswordView);
 
 
+        addBtn.setOnClickListener(this);
         login .setOnClickListener(this);
         enroll .setOnClickListener(this);
         back.setOnClickListener(this);
@@ -42,11 +41,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        init();
-        File dbFile = getDatabasePath("/data/data/com.example.login/databases/MyDatabase");
-        db = SQLiteDatabase.openDatabase(dbFile.getAbsolutePath(), null, SQLiteDatabase.OPEN_READONLY);
-
+        setContentView(R.layout.activity_enroll);
     }
 
     @Override
@@ -55,8 +50,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         //添加
         if(id==R.id.enroll){
             setContentView(R.layout.activity_enroll);
-            Toast.makeText(this, "跳转到注册界面", Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(this, "注册成功", Toast.LENGTH_SHORT).show();
+//            db=myDbHelper.getWritableDatabase();
             String username=user_name.getText().toString();
             String password=user_password.getText().toString();
 //                ContentValues contentValues=new ContentValues();
@@ -68,6 +63,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         }
         //查询
         else if(id==R.id.login){
+//            db=myDbHelper.getWritableDatabase();
             String f=user_name.getText().toString();
             Cursor cursor=db.query("user",new String[]{"serName","password"},"serName like ?",new String[]{f},null,null,null);
             if(cursor.moveToFirst()){
@@ -76,10 +72,28 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 Toast.makeText(this, "无此账号，请注册后使用", Toast.LENGTH_SHORT).show();
             }
             cursor.close();
-            db.close();
+//            db.close();
         }
         else if(id==R.id.back){
             finish();
+        }else if(id==R.id.enroll){
+
+        }
+    }
+    class MyDbHelper extends SQLiteOpenHelper {
+
+        public MyDbHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+            super(context, name, factory, version);
+        }
+
+        @Override
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL("create table user(user_id integer primary key autoincrement,userName varchar(20),password varchar(30))");
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
         }
     }
 }

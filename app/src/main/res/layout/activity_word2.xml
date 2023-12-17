@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Word2">
+    tools:context=".Word2"
+    android:background="#56FDD835">
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/btn_star_big_on"
+        android:text="收藏夹"
+        android:backgroundTint="#FB8C00"
+        android:id="@+id/collec"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+
+        ></Button>
 
     <TextView
         android:id="@+id/w1"
@@ -21,7 +34,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="300dp"
         android:clickable="true"
-
+        android:backgroundTint="#FB8C00"
         android:onClick="myclick1"
         android:text="@string/tran1"
 
@@ -33,7 +46,7 @@
         android:layout_height="80dp"
         android:layout_below="@+id/a1"
         android:text="@string/tran2"
-
+        android:backgroundTint="#FB8C00"
         android:clickable="true"
         android:onClick="myclick2"
         />
@@ -41,7 +54,7 @@
         android:id="@+id/a3"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-
+        android:backgroundTint="#FB8C00"
         android:layout_below="@+id/a2"
         android:text="@string/tran3"
 
@@ -54,7 +67,7 @@
         android:layout_height="80dp"
         android:layout_below="@+id/a3"
         android:text="@string/tran4"
-
+        android:backgroundTint="#FB8C00"
         android:clickable="true"
         android:onClick="myclick4"
         />
@@ -66,7 +79,8 @@
         android:text="next"
         android:textSize="20dp"
         android:layout_below="@+id/a4"
-        android:layout_centerHorizontal="true"></Button>
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FB8C00"></Button>
 
     <Button
         android:id="@+id/exit"
@@ -75,5 +89,6 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="69dp"
         android:text="exit"
+        android:backgroundTint="#FB8C00"
         android:textSize="20dp"></Button>
 </RelativeLayout>
